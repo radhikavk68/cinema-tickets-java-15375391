@@ -38,8 +38,8 @@ class TicketServiceImplTest {
 
         ticketService.purchaseTickets(1L, adult);
 
-        verify(paymentService).makePayment(1L, 50);     // 2 * £25
-        verify(reservationService).reserveSeat(1L, 2); // 2 seats
+        verify(paymentService).makePayment(1L, 50);
+        verify(reservationService).reserveSeat(1L, 2);
     }
 
     @Test
@@ -49,8 +49,8 @@ class TicketServiceImplTest {
 
         ticketService.purchaseTickets(1L, adult, child);
 
-        verify(paymentService).makePayment(1L, 55);     // 25 + (2*15)
-        verify(reservationService).reserveSeat(1L, 3); // 1 adult + 2 children
+        verify(paymentService).makePayment(1L, 55);
+        verify(reservationService).reserveSeat(1L, 3);
     }
 
     @Test
@@ -61,8 +61,8 @@ class TicketServiceImplTest {
 
         ticketService.purchaseTickets(1L, adult, child, infant);
 
-        verify(paymentService).makePayment(1L, 40);     // 25 + 15 + 0
-        verify(reservationService).reserveSeat(1L, 2); // infant doesn’t need seat
+        verify(paymentService).makePayment(1L, 40);
+        verify(reservationService).reserveSeat(1L, 2);
     }
 
     @Test
@@ -71,8 +71,8 @@ class TicketServiceImplTest {
 
         ticketService.purchaseTickets(1L, adult);
 
-        verify(paymentService).makePayment(1L, 625);     // 25 * 25
-        verify(reservationService).reserveSeat(1L, 25); // 25 seats
+        verify(paymentService).makePayment(1L, 625);
+        verify(reservationService).reserveSeat(1L, 25);
     }
 
     // ❌ Negative Scenarios

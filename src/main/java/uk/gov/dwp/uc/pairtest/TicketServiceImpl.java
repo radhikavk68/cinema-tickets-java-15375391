@@ -12,7 +12,7 @@ public class TicketServiceImpl implements TicketService {
      * Should only have private methods other than the one below.
      */
 
-    private static final int MAX_TICKETS = 25; // Consider externalizing to properties
+    private static final int MAX_TICKETS = 25;
     private static final int ADULT_PRICE = 25;
     private static final int CHILD_PRICE = 15;
     private static final int INFANT_PRICE = 0;
